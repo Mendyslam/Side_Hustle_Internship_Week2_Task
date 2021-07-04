@@ -126,9 +126,7 @@ if(isset($_POST["register"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <style>
-        * {
-            margin: 0px;
-        }
+
         h2 {
             color: green;
         }
@@ -169,7 +167,7 @@ if(isset($_POST["register"])) {
 </head>
 <body>
     <!-- Registeration Field -->
-    <form action="register.php" method="POST" id="register">
+    <form action="session_authentication.php" method="POST" id="register">
     <h2 class="blue"><?php echo $heading; ?></h2>
     <h2 class="red"><?php echo $headingAlert; ?></h2>
     <h2 class="green"><?php echo $headingSuccess; ?></h2>
@@ -186,7 +184,7 @@ if(isset($_POST["register"])) {
     </form>
 
     <!-- Login -->
-    <form action="register.php" method="POST" id="login">
+    <form action="session_authentication.php" method="POST" id="login">
     <h2 class="blue"><?php echo $logging; ?></h2>
     <h2 class="red"><?php echo $loggingAlert; ?></h2>
     <h2 class="green"><?php echo $loggingSuccess; ?></h2>
