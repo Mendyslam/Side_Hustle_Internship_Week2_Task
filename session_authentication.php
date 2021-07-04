@@ -41,8 +41,8 @@ if(isset($_POST["register"])) {
         $passwordError = "Please set a password";
     } else {
         $password = test_input($_POST['password']);
-        if(!preg_match('/^[a-zA-Z\d]{8,20}$/', $password)) {
-            $passwordError = "Must contain only numbers & letters & 8-20 long";
+        if(!preg_match('/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/', $password)) {
+            $passwordError = "Must contain at least one, number, lowercase, uppercase letter and 8 length long";
         } else {
             $passwordValid = "Password is Valid";
             $passwordError = "";
